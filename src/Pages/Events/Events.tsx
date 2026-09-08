@@ -2,47 +2,12 @@ import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   CalendarDays,
-  Clock3,
-  MapPin,
   Users,
 } from "lucide-react";
 import Navbar from "../NavBar/NavBar";
+import EventsSection from "./EventsSection";
+import Logo from "../../assets/Logo.jpg"
 
-const upcomingEvents = [
-  {
-    date: "09",
-    month: "SEP",
-    year: "2026",
-    title: "Building Teams That Last",
-    category: "Business Advocacy Forum & Counseling Series",
-    description:
-      "A practical conversation on HR, systems, delegation, and the foundations required to build teams that perform and organizations that last.",
-    time: "7:00 PM – 8:00 PM GMT",
-    location: "Google Meet",
-  },
-  {
-    date: "14",
-    month: "OCT",
-    year: "2026",
-    title: "Business Advocacy Forum",
-    category: "Business Advocacy Forum & Counseling Series",
-    description:
-      "An engaging session focused on practical business challenges, leadership, and sustainable organizational growth.",
-    time: "7:00 PM – 8:00 PM GMT",
-    location: "Google Meet",
-  },
-  {
-    date: "11",
-    month: "NOV",
-    year: "2026",
-    title: "Business Advocacy Forum",
-    category: "Business Advocacy Forum & Counseling Series",
-    description:
-      "A strategic discussion designed to equip business leaders with practical insights for improving organizational performance.",
-    time: "7:00 PM – 8:00 PM GMT",
-    location: "Google Meet",
-  },
-];
 
 function Events() {
 
@@ -73,7 +38,7 @@ function Events() {
               DORiSA Consult Events
             </p>
 
-            <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">
+            <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl animate-pulse">
               Conversations that
               <span className="block text-amber-400">
                 create impact.
@@ -103,99 +68,28 @@ function Events() {
               </h2>
             </div>
 
-            <p className="max-w-xl text-sm leading-7 text-slate-500">
+
+
+
+            <p className="max-w-xl text-sm leading-7 text-slate-500 flex flex-col">
+
+<span className="animate-bounce">
+
+    <img src={Logo} alt=""  width={250}/>
+</span>
+
+
               Explore upcoming DORiSA Consult events and reserve your
               place for our next business and leadership conversations.
+
             </p>
+
+
           </div>
 
           <div className="mt-12 space-y-6">
-            {upcomingEvents.map((event, index) => (
-              <motion.article
-                key={`${event.date}-${event.month}`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{
-                  once: true,
-                  amount: 0.2,
-                }}
-                transition={{
-                  duration: 0.7,
-                  delay: index * 0.1,
-                }}
-                whileHover={{ y: -3 }}
-                className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-xl hover:shadow-slate-900/5"
-              >
-                <div className="grid lg:grid-cols-[150px_1fr_auto] lg:items-center">
-                  {/* Date */}
-                  <div className="flex items-center gap-4 border-b border-slate-100 p-6 lg:flex-col lg:items-start lg:border-b-0 lg:border-r">
-                    <div>
-                      <p className="text-5xl font-bold leading-none text-slate-950">
-                        {event.date}
-                      </p>
-
-                      <p className="mt-1 text-sm font-bold tracking-widest text-amber-600">
-                        {event.month}
-                      </p>
-                    </div>
-
-                    <p className="text-sm font-medium text-slate-400 lg:mt-2">
-                      {event.year}
-                    </p>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 md:p-8">
-                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-amber-600">
-                      {event.category}
-                    </p>
-
-                    <h3 className="mt-3 text-2xl font-bold text-slate-950 md:text-3xl">
-                      {event.title}
-                    </h3>
-
-                    <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600">
-                      {event.description}
-                    </p>
-
-                    <div className="mt-6 flex flex-wrap gap-5">
-                      <div className="flex items-center gap-2 text-sm text-slate-500">
-                        <Clock3
-                          size={16}
-                          className="text-amber-600"
-                        />
-                        {event.time}
-                      </div>
-
-                      <div className="flex items-center gap-2 text-sm text-slate-500">
-                        <MapPin
-                          size={16}
-                          className="text-amber-600"
-                        />
-                        {event.location}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Action */}
-                  <div className="border-t border-slate-100 p-6 lg:border-l lg:border-t-0 lg:p-8">
-                    <motion.button
-                      whileHover={{ scale: 1.04 }}
-                      whileTap={{ scale: 0.97 }}
-                      className="flex w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-slate-800 lg:w-auto"
-                    >
-                      Register
-                      <ArrowUpRight
-                        size={17}
-                        className="text-amber-400"
-                      />
-                    </motion.button>
-                  </div>
-                </div>
-
-                <div className="h-1 w-0 bg-amber-500 transition-all duration-500 group-hover:w-full" />
-              </motion.article>
-            ))}
+     <EventsSection />
+         
           </div>
         </div>
       </section>
