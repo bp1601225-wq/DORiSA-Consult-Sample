@@ -21,10 +21,10 @@ function ContactUsPage() {
 
 
 
-const {register, handleSubmit, reset, 
-  formState:{
-    errors, isSubmitting
-}} = useForm<ContactUsType>()
+const {register, handleSubmit,  
+
+
+} = useForm<ContactUsType>()
 
 
 const SendInquiry = (data:ContactUsType) =>{
