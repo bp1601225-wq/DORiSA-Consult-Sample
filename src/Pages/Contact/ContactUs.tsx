@@ -123,8 +123,14 @@ console.log(data)
                   </p>
 
                   <p className="mt-1 text-sm font-medium text-white">
-                    +233 XX XXX XXXX
+                   024 370 4298 
                   </p>
+
+                 <p className="mt-1 text-sm font-medium text-white">
+                   
+020 912 2063
+                  </p>
+
                 </div>
               </div>
 
