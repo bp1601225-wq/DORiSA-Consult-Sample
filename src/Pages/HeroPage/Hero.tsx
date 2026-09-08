@@ -22,10 +22,15 @@ function Hero() {
 
   return (
     <SectionComponent className="min-h-[calc(100vh-80px)]">
+
+
+
+
       <div className="grid min-h-[75vh] items-center gap-16 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
         <div>
+
 
           {/* Small badge */}
           <motion.div
