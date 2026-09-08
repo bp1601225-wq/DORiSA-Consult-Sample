@@ -6,6 +6,7 @@ import {
   Phone,
   Clock3,
   CheckCircle2,
+  Globe2,
 } from "lucide-react";
 
 
@@ -30,6 +31,7 @@ const {register, handleSubmit,
 const SendInquiry = (data:ContactUsType) =>{
 console.log(data)
 }
+
 
 
 
@@ -142,26 +144,28 @@ console.log(data)
                   </p>
                 </div>
               </div>
+<div className="flex items-start gap-4">
+  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-amber-400">
+    <Globe2 size={19} />
+  </div>
 
-              <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-amber-400">
-                  <Clock3 size={19} />
-                </div>
+  <div>
+    <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
+      Website
+    </p>
 
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
-                    Business Hours
-                  </p>
+    <a
+      href="https://www.dorisaconsult.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-1 block text-sm font-medium text-white transition hover:text-amber-400"
+    >
+      www.dorisaconsult.com
+    </a>
+  </div>
+</div>
 
-                  <p className="mt-1 text-sm font-medium text-white">
-                    Monday – Friday
-                  </p>
-
-                  <p className="mt-1 text-xs text-slate-500">
-                    8:00 AM – 5:00 PM
-                  </p>
-                </div>
-              </div>
+              
             </div>
 
             {/* Trust Statement */}
