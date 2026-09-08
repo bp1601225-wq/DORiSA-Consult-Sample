@@ -4,7 +4,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Clock3,
   CheckCircle2,
   Globe2,
 } from "lucide-react";
