@@ -30,7 +30,7 @@ function SectionComponent({
         duration: 0.7,
         ease: "easeOut",
       }}
-      className={`relative overflow-hidden px-6 py-24 md:px-10 md:py-32 ${className}`}
+      className={`relative overflow-hidden  p-5  ${className}`}
     >
       {/* Decorative background */}
       <div className="pointer-events-none absolute -right-32 top-20 h-72 w-72 rounded-full bg-amber-100/40 blur-3xl" />

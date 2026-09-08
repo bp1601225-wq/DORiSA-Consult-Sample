@@ -7,7 +7,7 @@ import ApproachPage from "../OurApprach/ApproachPage";
 
 function LandingPage() {
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <Navbar />
 
       <Hero />
