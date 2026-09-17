@@ -1,5 +1,8 @@
 
 import Edition2 from "../../assets/flyer.jpg"
+import Logo from "../../assets/Logo.jpg"
+
+
 
 export const EventsNews = {
 
@@ -59,8 +62,8 @@ EventsPost() {
       date: "11 August 2026",
 
 // First article
-image:
-  "https://static.wixstatic.com/media/6b5d13_0b6f2f1e3c4940fb9f6ab80deead4114~mv2.png/v1/fill/w_1000%2Ch_571%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01/6b5d13_0b6f2f1e3c4940fb9f6ab80deead4114~mv2.png",
+image: Logo,
+
 
 
       sources: [
@@ -132,8 +135,7 @@ image:
       date: "17 August 2026",
 
 // Second article
-image:
-  "https://static.wixstatic.com/media/92295d_0e04f38547294d14aa67eb55c9e0cbaf~mv2.png/v1/fill/w_640%2Ch_1034%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/92295d_0e04f38547294d14aa67eb55c9e0cbaf~mv2.png",
+image: Logo,
 
 
       sources: [

@@ -6,8 +6,15 @@ import {
 } from "lucide-react";
 import SectionComponent from "../../Components/Sections";
 
+import Consulting from "../../assets/consu.webp"
+
+
+
 
 function Hero() {
+
+
+
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({
       behavior: "smooth",
@@ -20,12 +27,14 @@ function Hero() {
     });
   };
 
+
+
+
   return (
-    <SectionComponent className="min-h-[calc(100vh-80px)]">
-
-
-
-
+    <SectionComponent 
+id="home"
+className="min-h-[calc(100vh-80px)]">
+      
       <div className="grid min-h-[75vh] items-center gap-16 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
@@ -182,7 +191,7 @@ function Hero() {
             className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-2xl shadow-slate-900/10"
           >
             <img
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+              src={Consulting}
               alt="Business consulting team in a meeting"
               className="h-[520px] w-full object-cover"
             />
