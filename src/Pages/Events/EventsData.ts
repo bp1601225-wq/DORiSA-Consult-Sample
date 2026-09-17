@@ -170,23 +170,64 @@ image:
       ],
     },
 
+   {
+  title:
+    "Building Teams That Last: HR, Systems & Delegation for Sustainable Growth",
+
+  description:
+    "Join DORiSA Consult for a practical conversation on building effective teams, strengthening systems, improving delegation, and creating organizations that are built to last.",
+
+  date: "9 September 2026",
+
+  image: Edition2,
+
+  time: "7:00 PM – 8:00 PM GMT",
+
+  location: "Google Meet",
+
+  sources: [
     {
-      title:
-        "Building Teams That Last: HR, Systems & Delegation for Sustainable Growth",
-
-      description:
-        "Join DORiSA Consult for a practical conversation on building effective teams, strengthening systems, improving delegation, and creating organizations that are built to last.",
-
-      date: "9 September 2026",
-
-      image: Edition2,
-
-      time: "7:00 PM – 8:00 PM GMT",
-
-      location: "Google Meet",
-
-      sources: [],
+      name: "GhanaWebbers",
+      link:
+        "https://www.ghanawebbers.com/GhanaHomePage/NewsArchive/DORiSA-Consult-Holds-2nd-Business-Advocacy-Forum-on-Building-Teams-That-Last-2178558",
     },
+    {
+      name: "BestNewsGH",
+      link:
+        "https://bestnewsgh.com/dorisa-consult-holds-2nd-business-advocacy-forum-on-building-teams-that-last/",
+    },
+    {
+      name: "MyDailyNewsOnline",
+      link:
+        "https://mydailynewsonline.com/2026/09/15/dorisa-consult-holds-2nd-business-advocacy-forum-on-building-teams-that-last/",
+    },
+    {
+      name: "African Spy",
+      link:
+        "https://africanspy.com/dorisa-consult-holds-2nd-business-advocacy-forum-on-building-teams-that-last/",
+    },
+    {
+      name: "AMA Ghana Online",
+      link:
+        "https://amaghanaonline.com/2026/09/15/dorisa-consult-holds-2nd-business-advocacy-forum-on-building-teams-that-last-on-september-9-2026/",
+    },
+    {
+      name: "Campaigner Online",
+      link:
+        "https://campaigneronline.com/dorisa-consult-holds-2nd-business-advocacy-forum-on-building-teams-that-last/",
+    },
+    {
+      name: "Ghanaian Radar",
+      link:
+        "https://ghanaianradar.com/dorisa-consult-holds-2nd-business-advocacy-forum-on-building-teams/",
+    },
+    {
+      name: "Ghana Media",
+      link:
+        "https://ghanamedia.net/dorisa-consult-business-advocacy-forum-2026/",
+    },
+  ],
+},
   ];
 
   return Referrential;

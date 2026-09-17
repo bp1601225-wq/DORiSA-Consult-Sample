@@ -85,12 +85,11 @@ const perspectives = [
   },
 ];
 
+
+
 function AboutPage() {
   return (
-
-
     <>
-
     <Navbar />
     <SectionComponent className="bg-white">
       {/* Header */}
