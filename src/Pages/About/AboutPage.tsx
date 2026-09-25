@@ -9,7 +9,6 @@ import {
   Users,
 } from "lucide-react";
 import SectionComponent from "../../Components/Sections";
-import Navbar from "../NavBar/NavBar";
 import LeadershipProfile from "../LeaderShip/LeaderShipProfile";
 
 
@@ -90,7 +89,7 @@ const perspectives = [
 function AboutPage() {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <SectionComponent className="bg-white">
       {/* Header */}
       <div className="grid items-end gap-10 lg:grid-cols-[1fr_1.25fr]">

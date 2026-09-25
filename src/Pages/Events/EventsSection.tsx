@@ -152,7 +152,7 @@ console.log(`selected image is`, selectedImage)
 </div>
 
       {/* Bottom CTA */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -175,7 +175,7 @@ console.log(`selected image is`, selectedImage)
           View More
           <ExternalLink size={16} />
         </a>
-      </motion.div>
+      </motion.div> */}
 
 
 
