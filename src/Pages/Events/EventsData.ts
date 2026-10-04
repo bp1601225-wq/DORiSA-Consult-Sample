@@ -1,7 +1,7 @@
 
 import Edition2 from "../../assets/flyer.jpg"
 import Logo from "../../assets/Logo.jpg"
-
+import Edition3 from "../../assets/Actual.jpeg"
 
 
 export const EventsNews = {
@@ -51,7 +51,27 @@ return upcoming
  },
 
 EventsPost() {
+
   const Referrential = [
+{
+  title:
+    "From Visibility to Sales – The Legal Way: Compliant Digital Positioning Strategies for SMEs in 2026",
+
+  description:
+    "DORiSA Consult presents the 3rd Edition of the Business Advocacy Forum & Counselling Series, focusing on compliant digital positioning strategies that help SMEs move from visibility to sales while staying on the right side of the law.",
+
+  date: "14 October 2026",
+
+  image: Edition3,
+
+  time: "7:00 PM – 8:00 PM GMT",
+
+  location: "Microsoft Teams",
+
+  sources: [],
+},
+
+
     {
       title:
         "DORiSA Consult Launches With Maiden Business Advocacy Forum And Counselling Series",
@@ -230,6 +250,9 @@ image: Logo,
     },
   ],
 },
+
+
+
   ];
 
   return Referrential;
