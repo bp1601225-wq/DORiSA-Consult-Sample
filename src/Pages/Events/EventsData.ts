@@ -1,7 +1,7 @@
 
 import Edition2 from "../../assets/flyer.jpg"
 import Logo from "../../assets/Logo.jpg"
-import Edition3 from "../../assets/Actual.jpeg"
+import Edition3 from "../../assets/Edition3.jpg"
 
 
 export const EventsNews = {
@@ -60,7 +60,7 @@ EventsPost() {
   description:
     "DORiSA Consult presents the 3rd Edition of the Business Advocacy Forum & Counselling Series, focusing on compliant digital positioning strategies that help SMEs move from visibility to sales while staying on the right side of the law.",
 
-  date: "14 October 2026",
+  date: "14 October 2026" ,
 
   image: Edition3,
 
@@ -68,7 +68,63 @@ EventsPost() {
 
   location: "Microsoft Teams",
 
-  sources: [],
+ sources: [
+  {
+    name: "GhanaWebbers",
+    link:
+      "https://www.ghanawebbers.com/GhanaHomePage/NewsArchive/DORiSA-Consult-Announces-3rd-Edition-of-Monthly-Business-Advocacy-Forum-Counselling-Series-2186825",
+  },
+  {
+    name: "BestNewsGH",
+    link:
+      "https://bestnewsgh.com/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum-counselling-series/",
+  },
+  {
+    name: "MyDailyNewsOnline",
+    link:
+      "https://mydailynewsonline.com/2026/10/11/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum-counselling-series/",
+  },
+  {
+    name: "African Spy",
+    link:
+      "https://africanspy.com/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum-counselling-series/",
+  },
+  {
+    name: "Info Ghana News",
+    link:
+      "https://infoghananews.com/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum-counselling-series/",
+  },
+  {
+    name: "News Ghana",
+    link:
+      "https://newsghana.com.gh/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum-counselling-series/",
+  },
+  {
+    name: "AMA Ghana Online",
+    link:
+      "https://amaghanaonline.com/2026/10/11/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum-counselling-series/",
+  },
+  {
+    name: "Ghana Media",
+    link:
+      "https://ghanamedia.net/dorisa-consult-to-host-sme-legal-digital-marketing-forum/",
+  },
+  {
+    name: "Campaigner Online",
+    link:
+      "https://campaigneronline.com/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum-counselling-series/",
+  },
+  {
+    name: "Ghanaian Radar",
+    link:
+      "https://ghanaianradar.com/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum-counselling-series/",
+  },
+  {
+    name: "African Live News",
+    link:
+      "https://africalivenews.com/dorisa-consult-announces-3rd-edition-of-monthly-business-advocacy-forum/",
+  },
+],
 },
 
 

@@ -62,7 +62,11 @@ console.log(`selected image is`, selectedImage)
 
       {/* Posts */}
 <div className="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+
+
+
   {EventsNews.EventsPost().map((post, index) => (
+    
     <motion.article
       key={post.title}
       initial={{ opacity: 0, y: 35 }}
@@ -149,6 +153,7 @@ console.log(`selected image is`, selectedImage)
       </div>
     </motion.article>
   ))}
+
 </div>
 
       {/* Bottom CTA */}
