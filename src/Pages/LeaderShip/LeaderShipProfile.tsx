@@ -10,7 +10,7 @@ import {
   Users,
 } from "lucide-react";
 
-import Image from "../../assets/conss.jpg";
+import Image from "../../assets/DrAryee.jpeg";
 
 const expertise = [
   "Strategic Human Resource Management",
