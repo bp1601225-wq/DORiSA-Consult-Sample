@@ -106,6 +106,13 @@ function Navbar() {
       id: "services",
     },
 
+       {
+      label: "Daily Motivational Quotes",
+      type: "route",
+      path: "/daily-motivations",
+    },
+
+
     /*
       type: "route"
 

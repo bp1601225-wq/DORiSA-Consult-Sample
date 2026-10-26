@@ -6,6 +6,8 @@ import {
   Lightbulb,
   ShieldCheck,
   Target,
+  Sparkles,
+   ArrowLeft, Home,
   Users,
 } from "lucide-react";
 import SectionComponent from "../../Components/Sections";
@@ -89,7 +91,7 @@ const perspectives = [
 function AboutPage() {
   return (
     <>
-    {/* <Navbar /> */}
+{/* <Navbar /> */}
     <SectionComponent className="bg-white">
       {/* Header */}
       <div className="grid items-end gap-10 lg:grid-cols-[1fr_1.25fr]">
@@ -99,13 +101,33 @@ function AboutPage() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
-            About{" "}
-            <span className="text-blue-900">
-              DORiSA
-            </span>{" "}
-            Consult
-          </p>
+
+{/* ArrowLeft, Home, */}
+
+<div className="inline-flex flex-col items-start gap-3">
+  <div className=" items-center gap-2">
+   <a
+  href="/"
+  className="group inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-3 py-2 text-xs font-semibold text-blue-900 transition-all duration-300 hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700"
+>
+  <ArrowLeft
+    size={14}
+    className="transition-transform duration-300 group-hover:-translate-x-1"
+  />
+  <Home size={14} />
+  <span>Back to Home</span>
+</a>
+
+    <div className="inline-flex items-center gap-2 rounded-full border border-amber-200/70 bg-amber-50/80 px-3 py-2">
+      <Sparkles size={14} className="text-amber-600" />
+
+      <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-blue-900">
+        Who We Are
+      </span>
+    </div>
+  </div>
+</div>
+
 
           <h2 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
             Building people.
