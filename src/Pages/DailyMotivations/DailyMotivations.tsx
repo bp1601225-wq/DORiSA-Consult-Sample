@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Share2, Sparkles } from "lucide-react";
 import { useState } from "react";
 
-import Navbar from "../NavBar/NavBar";
+import Navbar from "../../Components/Navigation/NavBar";
 import MotivationQuoteData from "./MotivationalQuotes";
 import ImageModal from "../../Components/Modal";
 

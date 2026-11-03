@@ -4,7 +4,7 @@ import {
   CalendarDays,
   Users,
 } from "lucide-react";
-import Navbar from "../NavBar/NavBar";
+import Navbar from "../../Components/Navigation/NavBar";
 import EventsSection from "./EventsSection";
 import Logo from "../../assets/Logo.jpg"
 

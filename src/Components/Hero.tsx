@@ -4,9 +4,9 @@ ArrowUpRight,
 CheckCircle2,
 Sparkles,
 } from "lucide-react";
-import SectionComponent from "../../Components/Sections";
+import SectionComponent from "./Sections";
 
-import Consulting from "../../assets/consu.webp"
+import Consulting from "../assets/consu.webp"
 
 
 
@@ -31,11 +31,11 @@ document.getElementById("services")?.scrollIntoView({
 
 
 return (
-<SectionComponent 
+<SectionComponent
 id="home"
-className="min-h-[calc(100vh-80px)]">
+className="min-h-[calc(100vh-80px)] py-10 sm:py-12 lg:py-16">
   
-  <div className="grid min-h-[75vh] items-center gap-16 lg:grid-cols-2">
+  <div className="grid min-h-[65vh] items-center gap-12 sm:min-h-[75vh] sm:gap-16 lg:grid-cols-2">
 
     {/* LEFT SIDE */}
     <div>
@@ -104,7 +104,7 @@ className="min-h-[calc(100vh-80px)]">
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
           onClick={scrollToContact}
-          className="group flex items-center justify-center gap-2 rounded-full bg-slate-950 px-7 py-4 text-sm font-semibold text-white shadow-xl shadow-slate-900/10"
+          className="group flex w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-7 py-4 text-sm font-semibold text-white shadow-xl shadow-slate-900/10 sm:w-auto"
         >
           Start a Conversation
 
@@ -125,7 +125,7 @@ className="min-h-[calc(100vh-80px)]">
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
           onClick={scrollToServices}
-          className="rounded-full border border-slate-200 bg-white px-7 py-4 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+          className="w-full rounded-full border border-slate-200 bg-white px-7 py-4 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 sm:w-auto"
         >
           Explore Services
         </motion.button>
@@ -193,7 +193,7 @@ className="min-h-[calc(100vh-80px)]">
         <img
           src={Consulting}
           alt="Business consulting team in a meeting"
-          className="h-[520px] w-full object-cover"
+          className="h-[360px] w-full object-cover sm:h-[440px] lg:h-[520px]"
         />
 
         {/* Image overlay */}
@@ -219,7 +219,7 @@ className="min-h-[calc(100vh-80px)]">
           duration: 0.6,
           delay: 0.8,
         }}
-        className="absolute -bottom-7 -left-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-xl md:-left-10"
+        className="absolute -bottom-4 left-2 rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:-bottom-7 sm:-left-4 sm:p-5 lg:-left-10"
       >
         <p className="text-xs font-medium text-slate-400">
           Our philosophy
@@ -240,7 +240,7 @@ className="min-h-[calc(100vh-80px)]">
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -right-4 top-10 rounded-2xl border border-amber-100 bg-white px-5 py-4 shadow-xl md:-right-8"
+        className="absolute -right-2 top-6 rounded-2xl border border-amber-100 bg-white px-4 py-3 shadow-xl sm:-right-3 sm:top-10 sm:px-5 sm:py-4 lg:-right-8"
       >
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-50">

@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import Logo from "../../assets/Logo.jpg";
+import { navigationItems } from "./navigationItems";
 
 function Navbar() {
   // Gives us the current URL/page.
@@ -16,6 +17,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   /*
     This function is used for navigation to SECTIONS
@@ -83,82 +85,6 @@ function Navbar() {
   };
 
   /*
-    THIS IS WHERE YOU DEFINE
-    WHAT EACH NAVBAR ITEM DOES.
-  */
-  const navItems = [
-    /*
-      type: "section"
-
-      Means:
-      "Don't open another route.
-       Find this ID on the Home page and scroll to it."
-    */
-    {
-      label: "Home",
-      type: "section",
-      id: "home",
-    },
-
-    {
-      label: "Services",
-      type: "section",
-      id: "services",
-    },
-
-       {
-      label: "Daily Motivational Quotes",
-      type: "route",
-      path: "/daily-motivations",
-    },
-
-
-    /*
-      type: "route"
-
-      Means:
-      "Open a different React Router page."
-
-      Clicking this will go to:
-
-      /about-us
-    */
-    {
-      label: "About Us",
-      type: "route",
-      path: "/about-us",
-    },
-
-    {
-      label: "Our Approach",
-      type: "section",
-      id: "approach",
-    },
-
-    {
-      label: "Contact",
-      type: "section",
-      id: "contact",
-    },
-
-    /*
-      Clicking Events will open:
-
-      /events
-
-      This means you should have a route
-      somewhere like:
-
-      <Route path="/events" element={<Events />} />
-    */
-    {
-      label: "Events",
-      type: "route",
-      path: "/events",
-    },
-  ];
-
-  /*
     Prevent the Home page from scrolling
     behind the mobile navigation drawer.
   */
@@ -170,12 +96,41 @@ function Navbar() {
     };
   }, [isOpen]);
 
-  /*
-    Whenever the URL/page changes,
-    automatically close the mobile drawer.
-  */
   useEffect(() => {
-    setIsOpen(false);
+    const frame = window.requestAnimationFrame(() => setIsOpen(false));
+    return () => window.cancelAnimationFrame(frame);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname !== "/") return;
+
+    const updateActiveSection = () => {
+      let currentSection = "home";
+
+      for (const item of navigationItems) {
+        if (item.type !== "section") continue;
+
+        const section = document.getElementById(item.id);
+        if (
+          section &&
+          section.getBoundingClientRect().top <= window.innerHeight * 0.35
+        ) {
+          currentSection = item.id;
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    const frame = window.requestAnimationFrame(updateActiveSection);
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, [location.pathname]);
 
   return (
@@ -230,7 +185,7 @@ function Navbar() {
 
           <div className="hidden items-center gap-1 lg:flex">
 
-            {navItems.map((item) => {
+            {navigationItems.map((item) => {
 
               /*
                 ===============================
@@ -252,17 +207,27 @@ function Navbar() {
                 scrollToSection("services")
               */
               if (item.type === "section") {
+                const isActive =
+                  location.pathname === "/" && activeSection === item.id;
+
                 return (
                   <motion.button
                     key={item.id}
-                    onClick={() => scrollToSection(item.id!)}
+                    onClick={() => scrollToSection(item.id)}
                     whileHover={{ y: -1 }}
                     whileTap={{ scale: 0.97 }}
-                    className="group relative rounded-xl px-4 py-2.5 text-[13px] font-medium tracking-wide text-blue-500 transition-all duration-300 hover:text-blue-600"
+                    aria-current={isActive ? "location" : undefined}
+                    className={`group relative rounded-xl px-4 py-2.5 text-[13px] font-medium tracking-wide transition-all duration-300 ${
+                      isActive ? "text-slate-950" : "text-blue-500 hover:text-blue-600"
+                    }`}
                   >
                     {item.label}
 
-                    <span className="absolute bottom-1.5 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-amber-500 transition-all duration-300 group-hover:w-5" />
+                    <span
+                      className={`absolute bottom-1.5 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-amber-500 transition-all duration-300 ${
+                        isActive ? "w-5" : "w-0 group-hover:w-5"
+                      }`}
+                    />
                   </motion.button>
                 );
               }
@@ -291,14 +256,19 @@ function Navbar() {
 
                 and renders the Events component.
               */
+              const isActive = location.pathname === item.path;
+
               return (
                 <motion.div
                   key={item.path}
                   whileHover={{ y: -1 }}
                 >
                   <Link
-                    to={item.path!}
-                    className="group relative flex items-center gap-1 rounded-xl px-4 py-2.5 text-[13px] font-medium tracking-wide text-blue-500 transition-all duration-300"
+                    to={item.path}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`group relative flex items-center gap-1 rounded-xl px-4 py-2.5 text-[13px] font-medium tracking-wide transition-all duration-300 ${
+                      isActive ? "text-slate-950" : "text-blue-500"
+                    }`}
                   >
                     {item.label}
 
@@ -307,7 +277,11 @@ function Navbar() {
                       className="opacity-0 -translate-y-0.5 -translate-x-0.5 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100"
                     />
 
-                    <span className="absolute bottom-1.5 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-amber-500 transition-all duration-300 group-hover:w-5" />
+                    <span
+                      className={`absolute bottom-1.5 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-amber-500 transition-all duration-300 ${
+                        isActive ? "w-5" : "w-0 group-hover:w-5"
+                      }`}
+                    />
                   </Link>
                 </motion.div>
               );
@@ -430,7 +404,7 @@ function Navbar() {
 
                 <div className="space-y-1">
 
-                  {navItems.map((item, index) => {
+                  {navigationItems.map((item, index) => {
 
                     /*
                       MOBILE SECTION
@@ -442,6 +416,9 @@ function Navbar() {
                       scrollToSection("services")
                     */
                     if (item.type === "section") {
+                      const isActive =
+                        location.pathname === "/" && activeSection === item.id;
+
                       return (
                         <motion.button
                           key={item.id}
@@ -451,8 +428,13 @@ function Navbar() {
                             delay: 0.05 * index,
                             duration: 0.35,
                           }}
-                          onClick={() => scrollToSection(item.id!)}
-                          className="group flex w-full items-center justify-between rounded-xl px-3 py-4 text-left text-base font-medium text-slate-700 transition-all hover:bg-white/60 hover:text-slate-950"
+                          onClick={() => scrollToSection(item.id)}
+                          aria-current={isActive ? "location" : undefined}
+                          className={`group flex w-full items-center justify-between rounded-xl px-3 py-4 text-left text-base font-medium transition-all ${
+                            isActive
+                              ? "bg-white/60 text-slate-950"
+                              : "text-slate-700 hover:bg-white/60 hover:text-slate-950"
+                          }`}
                         >
                           <span>{item.label}</span>
 
@@ -476,6 +458,8 @@ function Navbar() {
 
                       /events
                     */
+                    const isActive = location.pathname === item.path;
+
                     return (
                       <motion.div
                         key={item.path}
@@ -487,14 +471,21 @@ function Navbar() {
                         }}
                       >
                         <Link
-                          to={item.path!}
-                          className="group flex w-full items-center justify-between rounded-xl px-3 py-4 text-base font-medium text-slate-700 transition-all hover:bg-white/60 hover:text-slate-950"
+                          to={item.path}
+                          aria-current={isActive ? "page" : undefined}
+                          className={`group flex w-full items-center justify-between rounded-xl px-3 py-4 text-base font-medium transition-all ${
+                            isActive
+                              ? "bg-white/60 text-slate-950"
+                              : "text-slate-700 hover:bg-white/60 hover:text-slate-950"
+                          }`}
                         >
                           <span>{item.label}</span>
 
                           <ArrowUpRight
                             size={17}
-                            className="text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-amber-500"
+                            className={`transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-amber-500 ${
+                              isActive ? "text-amber-500" : "text-slate-300"
+                            }`}
                           />
                         </Link>
                       </motion.div>
