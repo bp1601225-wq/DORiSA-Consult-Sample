@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router";
-import { Menu, X, ArrowUpRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import Logo from "../../assets/Logo.jpg";
 import { navigationItems } from "./navigationItems";
 
@@ -17,6 +17,8 @@ function Navbar() {
   const navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
+  const moreMenuRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState("home");
 
   /*
@@ -102,6 +104,30 @@ function Navbar() {
   }, [location.pathname]);
 
   useEffect(() => {
+    if (!isMoreOpen) return;
+
+    const closeOnPointerDown = (event: MouseEvent) => {
+      if (
+        event.target instanceof Node &&
+        !moreMenuRef.current?.contains(event.target)
+      ) {
+        setIsMoreOpen(false);
+      }
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsMoreOpen(false);
+    };
+
+    document.addEventListener("mousedown", closeOnPointerDown);
+    document.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.removeEventListener("mousedown", closeOnPointerDown);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [isMoreOpen]);
+
+  useEffect(() => {
     if (location.pathname !== "/") return;
 
     const updateActiveSection = () => {
@@ -184,29 +210,11 @@ function Navbar() {
           {/* ================= DESKTOP NAVIGATION ================= */}
 
           <div className="hidden items-center gap-1 lg:flex">
+            {navigationItems
+              .filter((item) => item.type === "section")
+              .map((item) => {
+                if (item.type !== "section") return null;
 
-            {navigationItems.map((item) => {
-
-              /*
-                ===============================
-                SECTION NAVIGATION
-                ===============================
-
-                Example:
-
-                {
-                  label: "Services",
-                  type: "section",
-                  id: "services"
-                }
-
-                This DOES NOT open a new route.
-
-                It calls:
-
-                scrollToSection("services")
-              */
-              if (item.type === "section") {
                 const isActive =
                   location.pathname === "/" && activeSection === item.id;
 
@@ -218,11 +226,12 @@ function Navbar() {
                     whileTap={{ scale: 0.97 }}
                     aria-current={isActive ? "location" : undefined}
                     className={`group relative rounded-xl px-4 py-2.5 text-[13px] font-medium tracking-wide transition-all duration-300 ${
-                      isActive ? "text-slate-950" : "text-blue-500 hover:text-blue-600"
+                      isActive
+                        ? "text-slate-950"
+                        : "text-blue-500 hover:text-blue-600"
                     }`}
                   >
                     {item.label}
-
                     <span
                       className={`absolute bottom-1.5 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-amber-500 transition-all duration-300 ${
                         isActive ? "w-5" : "w-0 group-hover:w-5"
@@ -230,62 +239,76 @@ function Navbar() {
                     />
                   </motion.button>
                 );
-              }
+              })}
 
-              /*
-                ===============================
-                ROUTE NAVIGATION
-                ===============================
+            <div className="relative" ref={moreMenuRef}>
+              <button
+                type="button"
+                aria-expanded={isMoreOpen}
+                aria-haspopup="true"
+                onClick={() => setIsMoreOpen((open) => !open)}
+                className={`flex items-center gap-1 rounded-xl px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors ${
+                  isMoreOpen ||
+                  navigationItems.some(
+                    (item) =>
+                      item.type === "route" &&
+                      item.path === location.pathname,
+                  )
+                    ? "text-slate-950"
+                    : "text-blue-500 hover:text-blue-600"
+                }`}
+              >
+                More
+                <ChevronDown
+                  size={15}
+                  className={`transition-transform ${
+                    isMoreOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
 
-                Example:
-
-                {
-                  label: "Events",
-                  type: "route",
-                  path: "/events"
-                }
-
-                Because this is a React Router <Link>,
-                clicking it changes the URL to:
-
-                /events
-
-                React Router then looks for:
-
-                <Route path="/events" element={<Events />} />
-
-                and renders the Events component.
-              */
-              const isActive = location.pathname === item.path;
-
-              return (
-                <motion.div
-                  key={item.path}
-                  whileHover={{ y: -1 }}
-                >
-                  <Link
-                    to={item.path}
-                    aria-current={isActive ? "page" : undefined}
-                    className={`group relative flex items-center gap-1 rounded-xl px-4 py-2.5 text-[13px] font-medium tracking-wide transition-all duration-300 ${
-                      isActive ? "text-slate-950" : "text-blue-500"
-                    }`}
+              <AnimatePresence>
+                {isMoreOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.16 }}
+                    className="absolute right-0 top-full z-50 mt-2 w-64 rounded-2xl border border-slate-100 bg-white p-2 shadow-xl"
                   >
-                    {item.label}
+                    {navigationItems
+                      .filter((item) => item.type === "route")
+                      .map((item) => {
+                        if (item.type !== "route") return null;
 
-                    <ArrowUpRight
-                      size={13}
-                      className="opacity-0 -translate-y-0.5 -translate-x-0.5 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100"
-                    />
+                        const isActive = location.pathname === item.path;
 
-                    <span
-                      className={`absolute bottom-1.5 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-amber-500 transition-all duration-300 ${
-                        isActive ? "w-5" : "w-0 group-hover:w-5"
-                      }`}
-                    />
-                  </Link>
-                </motion.div>
-              );
-            })}
+                        return (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            onClick={() => setIsMoreOpen(false)}
+                            aria-current={isActive ? "page" : undefined}
+                            className={`flex items-center justify-between rounded-xl px-3 py-3 text-sm transition-colors ${
+                              isActive
+                                ? "bg-amber-50 text-slate-950"
+                                : "text-slate-700 hover:bg-slate-50 hover:text-slate-950"
+                            }`}
+                          >
+                            {item.label}
+                            <ArrowUpRight
+                              size={15}
+                              className={
+                                isActive ? "text-amber-500" : "text-slate-300"
+                              }
+                            />
+                          </Link>
+                        );
+                      })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* ================= RIGHT SIDE ================= */}

@@ -4,6 +4,7 @@ import Events from "../Pages/Events/Events";
 import AboutPage from "../Pages/About/AboutPage";
 import DailyMotivation from "../Pages/DailyMotivations/DailyMotivations";
 import Dorisa_Sessions from "../Pages/Dorisa_TV/DORiSA_Sessions";
+import Navbar from "../Components/Navigation/NavBar";
 
 export default function AppRoutes() {
   return (
@@ -18,7 +19,15 @@ export default function AppRoutes() {
     
       <Route path="/events" element={<Events />} />
 
-      <Route path="/about-us" element={<AboutPage />} />
+      <Route
+        path="/about-us"
+        element={
+          <>
+            <Navbar />
+            <AboutPage />
+          </>
+        }
+      />
 
       <Route path="/dorisa-tv" element={<Dorisa_Sessions />} />
 
