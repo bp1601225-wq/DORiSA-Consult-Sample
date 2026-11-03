@@ -66,7 +66,7 @@ EventsPost() {
 
   image: Edition4,
 
-  time: "To be announced",
+  time: "6th November 2026",
 
   location: "Microsoft Teams",
 
