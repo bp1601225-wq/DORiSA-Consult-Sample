@@ -2,6 +2,8 @@
 import Edition2 from "../../assets/flyer.jpg"
 import Logo from "../../assets/Logo.jpg"
 import Edition3 from "../../assets/Edition3.jpg"
+import Edition4 from "../../assets/Edition4.png"
+
 
 
 export const EventsNews = {
@@ -53,6 +55,27 @@ return upcoming
 EventsPost() {
 
   const Referrential = [
+{
+  title:
+    "Funding Your Growth: Navigating Loans, Grants & Investor Readiness in Ghana",
+
+  description:
+    "DORiSA Consult presents the 4th Edition of the Business Advocacy Forum & Counselling Series, focusing on funding opportunities for SMEs in Ghana. The forum will explore how businesses can navigate loans, access grants, and strengthen their investor readiness to secure the funding needed for sustainable growth.",
+
+  date: "To be announced",
+
+  image: Edition4,
+
+  time: "To be announced",
+
+  location: "Microsoft Teams",
+
+  sources: [
+
+  ],
+},
+
+
 {
   title:
     "From Visibility to Sales – The Legal Way: Compliant Digital Positioning Strategies for SMEs in 2026",
