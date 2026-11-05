@@ -5,6 +5,7 @@ import AboutPage from "../Pages/About/AboutPage";
 import DailyMotivation from "../Pages/DailyMotivations/DailyMotivations";
 import Dorisa_Sessions from "../Pages/Dorisa_TV/DORiSA_Sessions";
 import Navbar from "../Components/Navigation/NavBar";
+import SpeakersAndProfiles from "../Pages/SpeakersAndProfiles/SpeakersAndProfiles";
 
 export default function AppRoutes() {
   return (
@@ -30,6 +31,17 @@ export default function AppRoutes() {
       />
 
       <Route path="/dorisa-tv" element={<Dorisa_Sessions />} />
+
+      <Route
+        path="/speakers"
+        element={
+          <>
+            <Navbar />
+            <SpeakersAndProfiles />
+          </>
+        }
+      />
+
 
 
     <Route path="/daily-motivations" element={<DailyMotivation />} />

@@ -114,6 +114,10 @@ function Navbar() {
         setIsMoreOpen(false);
       }
     };
+
+
+
+    
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setIsMoreOpen(false);
     };
