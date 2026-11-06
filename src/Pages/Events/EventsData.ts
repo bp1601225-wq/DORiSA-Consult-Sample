@@ -2,7 +2,7 @@
 import Edition2 from "../../assets/flyer.jpg"
 import Logo from "../../assets/Logo.jpg"
 import Edition3 from "../../assets/Edition3.jpg"
-import Edition4 from "../../assets/Edition4.png"
+import Edition4 from "../../assets/Edition4.jpeg"
 
 
 
