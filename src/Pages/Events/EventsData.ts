@@ -62,7 +62,7 @@ EventsPost() {
   description:
     "DORiSA Consult presents the 4th Edition of the Business Advocacy Forum & Counselling Series, focusing on funding opportunities for SMEs in Ghana. The forum will explore how businesses can navigate loans, access grants, and strengthen their investor readiness to secure the funding needed for sustainable growth.",
 
-  date: "6 november 2026",
+  date: "11 november 2026",
 
   image: Edition4,
 
