@@ -1,6 +1,7 @@
 import Doris from "../../assets/4th_Edition/Dr. Doris.jpg"
 import Mercy from "../../assets/4th_Edition/Mercy.jpeg"
 import Enoch from "../../assets/4th_Edition/Dr Enoch.jpg"
+import Beatrice from "../../assets/4th_Edition/Dr. Beatrice.png"
 
 
 export const editions = [
@@ -9,6 +10,31 @@ export const editions = [
     theme: "Funding Your Growth: Navigating Loans, Grants & Investor Readiness in Ghana",
     date: "11 November 2026",
     speakers: [
+
+
+{
+  name: "Dr. Mrs. Beatrice Sarpong-Danquah",
+  role: "Speaker",
+
+  description:
+    "PhD, Chartered Accountant and Lecturer at the KNUST School of Business, Department of Accounting and Finance.",
+
+  qualifications:
+    "PhD | CA | MPhil | BSc",
+
+  bio: `Dr. Mrs. Beatrice Sarpong-Danquah is an academic and Chartered Accountant with qualifications including a PhD, MPhil and BSc.
+
+She is a Lecturer at the Kwame Nkrumah University of Science and Technology (KNUST), School of Business, Department of Accounting and Finance.
+
+Her academic and professional background brings knowledge and experience in accounting, finance and business education.
+
+Through her work in academia and professional practice, she contributes to the development of knowledge and the training of future business and finance professionals.`,
+
+  image: Beatrice,
+  cv: "",
+},
+
+
   {
   name: "Dr. Doris Aryee",
   role: "Host",
@@ -41,6 +67,8 @@ Through her work in education, consulting and leadership, she remains committed 
   image: Doris,
   cv: "",
 },
+
+
 
 
 
