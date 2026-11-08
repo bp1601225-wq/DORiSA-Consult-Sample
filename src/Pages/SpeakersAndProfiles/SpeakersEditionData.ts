@@ -101,7 +101,7 @@ He is also an active Christian and has held several national positions in the Me
 
 
 {
-  name: "Mercy Kwakye",
+  name: "Ms. Mercy Kwakye",
   role: "Distinguished Speaker",
   description:
     "Lecturer, Department of Accounting and Finance, Pentecost University. Fellow of the Association of Chartered Certified Accountants (ACCA) and experienced finance and banking professional.",
