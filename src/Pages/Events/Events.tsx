@@ -7,6 +7,7 @@ import {
 import Navbar from "../../Components/Navigation/NavBar";
 import EventsSection from "./EventsSection";
 import Logo from "../../assets/Logo.jpg"
+import UpcomingEventsSection from "./UpComingEvents";
 
 
 function Events() {
@@ -22,37 +23,37 @@ function Events() {
       {/* Hero */}
 <Navbar />
 
-      <section className="relative overflow-hidden bg-slate-950 px-6 py-24 md:px-10 md:py-32">
-        <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-amber-500/10 blur-3xl" />
+<UpcomingEventsSection />
+<section className="relative overflow-hidden bg-slate-950 px-6 py-24 md:px-10 md:py-32">
+  <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-amber-500/10 blur-3xl" />
 
-        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[450px] w-[450px] rounded-full bg-slate-800 blur-3xl" />
+  <div className="pointer-events-none absolute -bottom-40 -left-40 h-[450px] w-[450px] rounded-full bg-slate-800 blur-3xl" />
 
-        <div className="relative mx-auto max-w-7xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl"
-          >
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">
-              DORiSA Consult Events
-            </p>
+  <div className="relative mx-auto max-w-7xl">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="max-w-4xl"
+    >
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">
+        DORiSA Consult Events
+      </p>
 
-            <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl animate-pulse">
-              Conversations that
-              <span className="block text-amber-400">
-                create impact.
-              </span>
-            </h1>
+      <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">
+        Bringing people together.
+        <span className="block text-amber-400">
+          Sharing ideas.
+        </span>
+      </h1>
 
-            <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-              Join our business forums, leadership conversations, and
-              counseling sessions designed to provide practical insights
-              for individuals, teams, and organizations.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
+        Be part of our business forums and special events.
+        Meet people, share ideas and learn new ways to grow.
+      </p>
+    </motion.div>
+  </div>
+</section>
 
       {/* Upcoming Events */}
       <section className="px-6 py-20 md:px-10 md:py-28">

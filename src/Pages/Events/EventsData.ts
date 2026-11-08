@@ -8,49 +8,26 @@ import Edition4 from "../../assets/Edition4.jpeg"
 
 export const EventsNews = {
 
+UpComingEvents() {
+  
+  const upcoming = [
+    {
+      date: "11",
+      month: "NOV",
+      year: "2026",
+      title:
+        "Funding Your Growth: Navigating Loans, Grants & Investor Readiness in Ghana",
+      category:
+        "4th Edition Business Advocacy Forum & Counselling Series",
+      description:
+        "Join DORiSA Consult for an important conversation on how SMEs in Ghana can access loans, explore grants and become investor-ready. Learn how to secure funding and move your business from visibility to bankability.",
+      time: "7:00 PM GMT",
+      location: "Microsoft Teams",
+    },
+  ];
 
- UpComingEvents(){
-
-    const upcoming = [
-  {
-    date: "09",
-    month: "SEP",
-    year: "2026",
-    title: "Building Teams That Last",
-    category: "Business Advocacy Forum & Counseling Series",
-    description:
-      "A practical conversation on HR, systems, delegation, and the foundations required to build teams that perform and organizations that last.",
-    time: "7:00 PM – 8:00 PM GMT",
-    location: "Google Meet",
-  },
-  {
-    date: "14",
-    month: "OCT",
-    year: "2026",
-    title: "Business Advocacy Forum",
-    category: "Business Advocacy Forum & Counseling Series",
-    description:
-      "An engaging session focused on practical business challenges, leadership, and sustainable organizational growth.",
-    time: "7:00 PM – 8:00 PM GMT",
-    location: "Google Meet",
-  },
-  {
-    date: "11",
-    month: "NOV",
-    year: "2026",
-    title: "Business Advocacy Forum",
-    category: "Business Advocacy Forum & Counseling Series",
-    description:
-      "A strategic discussion designed to equip business leaders with practical insights for improving organizational performance.",
-    time: "7:00 PM – 8:00 PM GMT",
-    location: "Google Meet",
-  },
-
-
-];
-
-return upcoming
- },
+  return upcoming;
+},
 
 EventsPost() {
 
