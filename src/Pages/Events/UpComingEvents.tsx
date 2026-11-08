@@ -6,29 +6,16 @@ import {
   MapPin,
   ArrowUpRight,
 } from "lucide-react";
-import { EventsNews } from "./EventsData";
 
 const VIDEO_ID = "JJkYDUx7a9s";
 
 function UpcomingEventsSection() {
-  const allEvents = EventsNews.UpComingEvents();
 
   // Show only events that have not yet taken place.
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const upcoming = allEvents
-    .filter((event) => {
-      const eventDate = new Date(
-        `${event.month} ${event.date}, ${event.year}`
-      );
-      return eventDate >= today;
-    })
-    .sort(
-      (a, b) =>
-        new Date(`${a.month} ${a.date}, ${a.year}`).getTime() -
-        new Date(`${b.month} ${b.date}, ${b.year}`).getTime()
-    );
+ 
 
   return (
     <section className="bg-slate-50 px-6 py-20 md:px-10 md:py-24">
