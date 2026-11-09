@@ -48,7 +48,46 @@ EventsPost() {
   location: "Microsoft Teams",
 
   sources: [
-
+    {
+      name: "Current Issues Online",
+      link: "https://currentissuesonline.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
+    },
+    {
+      name: "Business & Financial Times",
+      link: "https://thebftonline.com/article/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth",
+    },
+    {
+      name: "Campaigner Online",
+      link: "https://campaigneronline.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
+    },
+    {
+      name: "News Ghana",
+      link: "https://newsghana.com.gh/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
+    },
+    {
+      name: "African Spy",
+      link: "https://africanspy.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
+    },
+    {
+      name: "BestNewsGH",
+      link: "https://bestnewsgh.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
+    },
+    {
+      name: "My Daily News Online",
+      link: "https://mydailynewsonline.com/2026/11/09/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
+    },
+    {
+      name: "Info Ghana News",
+      link: "https://infoghananews.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
+    },
+    {
+      name: "AMA Ghana Online",
+      link: "https://amaghanaonline.com/2026/11/09/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
+    },
+    {
+      name: "OPR News",
+      link: "https://opr.news/594b27d2261109en_gh?link=1&client=news",
+    },
   ],
 },
 
