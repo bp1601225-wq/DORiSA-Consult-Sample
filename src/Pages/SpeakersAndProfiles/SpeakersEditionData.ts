@@ -17,22 +17,23 @@ export const editions = [
   role: "Speaker",
 
   description:
-    "PhD, Chartered Accountant and Lecturer at the KNUST School of Business, Department of Accounting and Finance.",
+    "PhD in Accounting, Chartered Accountant and Lecturer at the KNUST School of Business, Department of Accounting and Finance.",
 
   qualifications:
-    "PhD | CA | MPhil | BSc",
+    "PhD | MPhil | BSc Business Administration (Accounting) | ICAG",
 
-  bio: `Dr. Mrs. Beatrice Sarpong-Danquah is an academic and Chartered Accountant with qualifications including a PhD, MPhil and BSc.
+  bio: `Dr. Mrs. Beatrice Sarpong-Danquah is a Lecturer at the Department of Accounting and Finance, Kwame Nkrumah University of Science and Technology (KNUST) School of Business, Kumasi, Ghana. She is an accomplished academic and accounting professional with expertise in accounting, corporate governance, financial management and business education.
 
-She is a Lecturer at the Kwame Nkrumah University of Science and Technology (KNUST), School of Business, Department of Accounting and Finance.
+She holds a PhD in Accounting, an MPhil in Accounting, and a Bachelor of Science (BSc.) in Business Administration (Accounting), all from the Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, Ghana. She is also a member of the Institute of Chartered Accountants, Ghana (ICAG), reflecting her commitment to professional excellence and the advancement of the accounting profession.
 
-Her academic and professional background brings knowledge and experience in accounting, finance and business education.
+Beyond her academic responsibilities, she previously served as the Chairperson of the Audit Committee of the Juaben Municipal Assembly, where she contributed to promoting financial accountability, transparency and sound governance in public administration.
 
-Through her work in academia and professional practice, she contributes to the development of knowledge and the training of future business and finance professionals.`,
+Her research interests span corporate governance, capital structure, microfinance institutions, financial literacy and accounting education. Through her academic and professional engagements, she contributes to the advancement of knowledge and the promotion of sound financial and governance practices.`,
 
   image: Beatrice,
   cv: "",
 },
+
 
 
   {
