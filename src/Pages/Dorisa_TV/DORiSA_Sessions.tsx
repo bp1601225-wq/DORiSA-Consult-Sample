@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 
 import SectionComponent from "../../Components/Sections";
-import Navbar from "../../Components/Navigation/NavBar";
 import { videos } from "./Sessions";
 
 function Dorisa_Sessions() {
@@ -20,10 +19,6 @@ function Dorisa_Sessions() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 bg-white">
-        <Navbar />
-      </div>
-
       <SectionComponent className="bg-white">
 
         {/* INTRODUCTION */}

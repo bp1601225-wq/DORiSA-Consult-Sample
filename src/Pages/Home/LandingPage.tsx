@@ -1,4 +1,3 @@
-import Navbar from "../../Components/Navigation/NavBar";
 import Hero from "../../Components/Hero";
 import ServicesPage from "../Services/Service";
 import AboutPage from "../About/AboutPage";
@@ -8,9 +7,6 @@ import ApproachPage from "../Approach/ApproachPage";
 function LandingPage() {
   return (
     <div className="flex flex-col gap-4">
-
-      <Navbar />
-
       <Hero />
 
       <ServicesPage />
