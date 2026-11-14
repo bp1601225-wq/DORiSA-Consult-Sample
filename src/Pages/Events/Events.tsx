@@ -7,6 +7,8 @@ import {
 import EventsSection from "./EventsSection";
 import Logo from "../../assets/Logo.jpg"
 import UpcomingEventsSection from "./UpComingEvents";
+import DecemberUpcomingEvent from "./NextEventsIncoming";
+import UnEstablishedUpcomingEvent from "./NextEventsIncoming";
 
 
 function Events() {
@@ -21,8 +23,10 @@ function Events() {
     <main className="min-h-screen bg-slate-50">
       {/* Hero */}
 
-<UpcomingEventsSection />
+{/* <UpcomingEventsSection /> */}
 
+
+<UnEstablishedUpcomingEvent />
 
 <section className="relative overflow-hidden bg-slate-950 px-6 py-24 md:px-10 md:py-32">
   <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-amber-500/10 blur-3xl" />
