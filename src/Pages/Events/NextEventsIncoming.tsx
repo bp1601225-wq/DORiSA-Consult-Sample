@@ -4,7 +4,6 @@ import {
   CalendarDays,
   Clock,
   MapPin,
-  ArrowUpRight,
   Sparkles,
   TrendingUp,
 } from "lucide-react";

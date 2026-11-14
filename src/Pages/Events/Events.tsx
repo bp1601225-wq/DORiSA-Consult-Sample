@@ -6,8 +6,6 @@ import {
 } from "lucide-react";
 import EventsSection from "./EventsSection";
 import Logo from "../../assets/Logo.jpg"
-import UpcomingEventsSection from "./UpComingEvents";
-import DecemberUpcomingEvent from "./NextEventsIncoming";
 import UnEstablishedUpcomingEvent from "./NextEventsIncoming";
 
 
