@@ -1,6 +1,16 @@
 
 export const videos = [
 
+    {
+        id: 4,
+    title: "4th Edition – Business Advocacy Forum",
+    description:
+      "Funding Your Growth: Loans, Grants & Investor Readiness in Ghana.",
+    date: "2026",
+  youtubeId: "LmCbPHZah3U",
+  },
+
+
   {
         id: 3,
     title: "3rd Edition – Business Advocacy Forum",
@@ -9,6 +19,8 @@ export const videos = [
     date: "2026",
   youtubeId: "UcsqihEmn4Y",
   },
+
+
 // {
 //   id: 1,
 //   title: "1st Edition – Business Advocacy Forum",

@@ -6,6 +6,7 @@ import {
   MapPin,
   ArrowUpRight,
   Sparkles,
+  TrendingUp,
 } from "lucide-react";
 
 function UnEstablishedUpcomingEvent() {
@@ -15,12 +16,12 @@ function UnEstablishedUpcomingEvent() {
 
         <div className="mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-600">
-            DORiSA Consult Events
+            DORiSA Consult 
           </p>
 
-          <h2 className="mt-3 text-3xl font-bold text-slate-950 md:text-4xl">
-            What's Coming Next?
-          </h2>
+        <h2 className="mt-3 text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
+  Exciting Things Are Coming!
+</h2>
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-500">
             Our next Business Advocacy Forum is coming this December.
@@ -58,13 +59,10 @@ function UnEstablishedUpcomingEvent() {
                 details.
               </p>
 
-              <a
-                href="/contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-400"
-              >
-                Stay Connected
-                <ArrowUpRight size={17} />
-              </a>
+        <span className="mt-8 inline-flex w-fit items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-amber-500 animate-pulse">
+  Stay Connected
+  <TrendingUp size={17} className="animate-bounce"/>
+</span>
             </div>
 
             {/* December Event Card */}
