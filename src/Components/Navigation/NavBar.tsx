@@ -133,13 +133,13 @@ const Navbar = () => {
             })}
           </div>
 
-          {/* Let's Talk Button */}
-          <Link
-            to="/contact"
-            className="hidden justify-self-end rounded-md bg-black px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#F59E0B] hover:text-black lg:block"
-          >
-            Let's Talk
-          </Link>
+   {/* Let's Talk Button */}
+<a
+  href="#contact"
+  className="hidden justify-self-end rounded-md bg-black px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#F59E0B] hover:text-black lg:block"
+>
+  Let's Talk
+</a>
 
           {/* Mobile Menu Button */}
           <button
