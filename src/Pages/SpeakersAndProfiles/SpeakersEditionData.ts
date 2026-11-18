@@ -3,10 +3,15 @@ import Mercy from "../../assets/4th_Edition/Mercy.jpeg"
 import Enoch from "../../assets/4th_Edition/Dr Enoch.jpg"
 import Beatrice from "../../assets/4th_Edition/Dr. Beatrice.png"
 
-
+// 5th Edition
+import DrIr from "../../assets/5th_Edition/Dr_ir.png"
+import Eziekel_Amponsah from "../../assets/5th_Edition/Mr_Eziekel.png"
 export const editions = [
+
+  
   {
-    title: "4th Edition",
+  title: "4th Edition",
+    status: "past" as const,
     theme: "Funding Your Growth: Navigating Loans, Grants & Investor Readiness in Ghana",
     date: "11 November 2026",
     speakers: [
@@ -148,6 +153,45 @@ Mercy is passionate about teaching, professional development and sharing practic
 
 
 
+    ],
+  },
+  {
+    title: "5th Edition",
+    status: "current" as const,
+    theme:
+      "Positioning Agribusiness, Retailers and Service Businesses for Sustainable Growth",
+    date: "Date to be announced",
+    speakers: [
+      {
+        name: "Ezekiel Amponsah",
+        role: "Finance and Risk Management Professional | Sales Trainer",
+        description:
+          "Finance and risk management professional with extensive experience in banking operations, internal control, corporate governance and financial performance management.",
+        qualifications:
+          "Master of Accounting & Finance | Associate Chartered Management Accountant (ACMA) | Chartered Global Management Accountant (CGMA)",
+        bio: `Ezekiel Amponsah is an accomplished finance and risk management professional with extensive experience in banking operations, internal control, corporate governance and financial performance management.
+
+He has also served as a part-time university lecturer and professional accounting tutor, teaching advanced financial management, advanced management accounting, financial strategy and risk management.`,
+        image: Eziekel_Amponsah,
+        cv: "",
+      },
+      {
+        name: "Dr. ir Alexander Tetteh Kwasi Nuer",
+        role: "Agribusiness Development Expert | Social Entrepreneurship Scholar",
+        description:
+          "Distinguished Ghanaian academic and agribusiness development expert with over 25 years of professional experience. Senior Lecturer at the Department of Agricultural Economics and Extension, Sasakawa Centre, University of Cape Coast.",
+        qualifications:
+          "PhD in Social Venture Entrepreneurship, Wageningen University and Research, the Netherlands",
+        bio: `Dr. ir. Alexander Tetteh Kwasi Nuer is a distinguished Ghanaian academic, agribusiness development expert and social entrepreneurship scholar with over 25 years of professional experience. He is a Senior Lecturer at the Department of Agricultural Economics and Extension, Sasakawa Centre, University of Cape Coast, Ghana.
+
+He holds a PhD in Social Venture Entrepreneurship from Wageningen University and Research, the Netherlands. His professional expertise spans agribusiness development, agricultural value chain management, social venture creation, sustainable enterprise development, rural entrepreneurship and international development.
+
+Dr. Nuer has extensive experience in promoting entrepreneurship, strengthening agribusiness ecosystems, mentoring emerging entrepreneurs and supporting agritech innovation. Through research, consultancy, teaching and industry engagement across Africa, he has championed innovative business models that connect commercial viability with social impact, agricultural transformation and sustainable livelihoods.
+
+He is passionate about advancing inclusive agribusiness, nurturing entrepreneurial talent and leveraging social entrepreneurship to address development challenges and create lasting economic and social value across Africa.`,
+        image: DrIr,
+        cv: "",
+      },
     ],
   },
 ];

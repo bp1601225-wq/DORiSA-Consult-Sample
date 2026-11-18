@@ -1,4 +1,4 @@
-       <>   {EventsNews.UpComingEvents().map((event, index) => (
+p       <>   {EventsNews.UpComingEvents().map((event, index) => (
               <motion.article
                 key={`${event.date}-${event.month}`}
                 initial={{ opacity: 0, y: 30 }}

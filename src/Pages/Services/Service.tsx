@@ -64,7 +64,7 @@ function ServicesPage() {
   return (
     <SectionComponent
       id="services"
-      className="bg-slate-50"
+      className=""
     >
       {/* Section Header */}
       <div className="mx-auto max-w-3xl text-center">

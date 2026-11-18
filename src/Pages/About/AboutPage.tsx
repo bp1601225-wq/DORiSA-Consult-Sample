@@ -92,7 +92,7 @@ function AboutPage() {
   return (
     <>
 {/* <Navbar /> */}
-    <SectionComponent className="bg-white">
+    <SectionComponent className="">
       {/* Header */}
       <div className="grid items-end gap-10 lg:grid-cols-[1fr_1.25fr]">
         <motion.div

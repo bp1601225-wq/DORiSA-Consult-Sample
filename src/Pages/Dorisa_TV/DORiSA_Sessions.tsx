@@ -20,55 +20,79 @@ function Dorisa_Sessions() {
   const youtubeChannel = "https://www.youtube.com/@DORiSAConsult-v2q";
 
   return (
-    <SectionComponent className="bg-white">
+    <SectionComponent className="">
 
       {/* INTRODUCTION */}
-      <section className="relative overflow-hidden bg-[#f8f9fb]">
-        <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-amber-50/70 to-transparent" />
+ 
+<section className="relative isolate overflow-hidden rounded-xl border border-blue-100 bg-white shadow-sm">
 
-        <div className="relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl"
-          >
-            <div className="mb-7 flex items-center gap-3">
-              <span className="h-[2px] w-10 bg-amber-500" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-blue-900">
-                DORiSA Consult / Media
-              </span>
-            </div>
+  {/* Decorative Background */}
+  <div className="pointer-events-none absolute inset-0 -z-10">
+    <div className="absolute right-0 top-0 h-full w-[45%] bg-gradient-to-l from-blue-50/80 to-transparent" />
 
-           <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-[#102b50] md:text-7xl">
-  Ideas That
-  <br />
-  Inspire <span className="text-amber-500">Growth.</span>
-  <br />
-  <span className="font-light">Conversations That Matter.</span>
-</h1>
+    <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full border-[35px] border-blue-50/70" />
 
-            <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <p className="max-w-xl text-base leading-8 text-slate-600">
-                Welcome to DORiSA Consult's media space. Here, you
-                can watch our business forums, hear from industry
-                experts and catch up on conversations covering
-                important issues that affect businesses and
-                entrepreneurs.
-              </p>
+    <div className="absolute bottom-0 right-[15%] h-40 w-40 rounded-full bg-orange-100/40 blur-3xl" />
 
-              <div className="shrink-0 border-l-2 border-amber-500 pl-5">
-                <p className="text-sm font-bold text-blue-950">
-                  Knowledge. Perspective. Growth.
-                </p>
-                <p className="mt-1 text-xs text-slate-500">
-                  Strategic Consulting for Sustainable Growth
-                </p>
-              </div>
-            </div>
-          </motion.div>
+    <div className="absolute bottom-8 right-10 h-2 w-20 rounded-full bg-[#FD7E02]" />
+  </div>
+
+  <div className="relative mx-auto max-w-7xl px-6 py-16 md:px-12 md:py-24">
+
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      className="max-w-4xl"
+    >
+
+      {/* Eyebrow */}
+      <div className="mb-8 flex items-center gap-3">
+        <span className="h-[2px] w-10 bg-[#FD7E02]" />
+
+        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#1D4ED8]">
+          DORiSA CONSULT / MEDIA CENTRE
+        </span>
+      </div>
+
+      {/* Heading */}
+      <h1 className="text-4xl font-bold leading-[1.15] tracking-tight text-[#14213D] sm:text-5xl md:text-7xl">
+        Ideas That Inspire
+        <br />
+        <span className="text-[#1D4ED8]">Meaningful Growth.</span>
+        <br />
+        <span className="font-light text-slate-500">
+          Conversations That Matter.
+        </span>
+      </h1>
+
+      {/* Description and Brand Statement */}
+      <div className="mt-10 flex flex-col gap-8 border-t border-blue-100 pt-8 md:flex-row md:items-start md:justify-between">
+
+        <p className="max-w-2xl text-sm leading-8 text-slate-600 md:text-base">
+          Welcome to the DORiSA Consult Media Centre — a platform for
+          insightful conversations, business perspectives and
+          practical knowledge. Explore our business forums, hear
+          from industry experts and discover discussions shaping
+          entrepreneurship and sustainable business growth.
+        </p>
+
+        <div className="shrink-0 border-l-[3px] border-[#FD7E02] py-1 pl-5">
+          <p className="text-sm font-bold tracking-wide text-[#14213D]">
+            Knowledge. Perspective. Growth.
+          </p>
+
+          <p className="mt-2 max-w-[220px] text-xs leading-6 text-slate-500">
+            Strategic Consulting for Sustainable Growth
+          </p>
         </div>
-      </section>
+
+      </div>
+
+    </motion.div>
+  </div>
+</section>
+
 
       {/* LATEST SESSION */}
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">

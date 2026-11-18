@@ -7,8 +7,8 @@ Sparkles,
 } from "lucide-react";
 import SectionComponent from "./Sections";
 
-import Consulting from "../assets/consu.webp"
 import { useNavigate } from "react-router";
+import Consulting from "../assets/Logo.jpg"
 
 
 

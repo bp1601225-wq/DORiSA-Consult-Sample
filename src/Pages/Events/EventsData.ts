@@ -10,23 +10,61 @@ export const EventsNews = {
 
 UpComingEvents() {
   
-  const upcoming = [
-    {
-      date: "11",
-      month: "NOV",
-      year: "2026",
-      title:
-        "Funding Your Growth: Navigating Loans, Grants & Investor Readiness in Ghana",
-      category:
-        "4th Edition Business Advocacy Forum & Counselling Series",
-      description:
-        "Join DORiSA Consult for an important conversation on how SMEs in Ghana can access loans, explore grants and become investor-ready. Learn how to secure funding and move your business from visibility to bankability.",
-      time: "7:00 PM GMT",
-      location: "Microsoft Teams",
-    },
-  ];
 
-  return upcoming;
+const upcoming = [
+
+{
+  date: "09",
+  month: "DEC",
+  year: "2026",
+  title:
+    "Positioning Agribusiness, Retailers and Service Businesses for Sustainable Growth",
+  category:
+    "5th Edition Business Advocacy Forum & Counselling Series",
+  description:
+    "Join DORiSA Consult for the 5th Edition of its Business Advocacy Forum and Counselling Series. This session will explore how agribusinesses, retail businesses and service providers can build sustainable, compliant and profitable businesses. Through three practical tracks, participants will gain insights into moving from farm to market, improving retail operations, and building credibility through effective systems, people and performance.",
+  time: "7:00 PM GMT",
+  location: "Microsoft Teams (Virtual)",
+  videoId: "",
+  link: "/speakers",
+  tracks: [
+    {
+      number: 1,
+      name: "Agribusiness: From Farm to Market",
+      description: "Building a Compliant and Profitable Agribusiness",
+    },
+    {
+      number: 2,
+      name: "Retail: Beyond Selling",
+      description: "Inventory, Compliance and Digital Positioning",
+    },
+    {
+      number: 3,
+      name: "Service: From Visibility to Credibility",
+      description: "Systems, People and Performance",
+    },
+  ],
+},
+
+  {
+    date: "11",
+    month: "NOV",
+    year: "2026",
+    title:
+      "Funding Your Growth: Navigating Loans, Grants & Investor Readiness in Ghana",
+    category:
+      "4th Edition Business Advocacy Forum & Counselling Series",
+    description:
+      "Join DORiSA Consult for an important conversation on how SMEs in Ghana can access loans, explore grants and become investor-ready. Learn how to secure funding and move your business from visibility to bankability.",
+    time: "7:00 PM GMT",
+    location: "Microsoft Teams",
+    videoId: "JJkYDUx7a9s",
+    link: "/speakers",
+  },
+];
+
+return upcoming;
+
 },
 
 EventsPost() {

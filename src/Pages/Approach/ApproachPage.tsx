@@ -44,7 +44,7 @@ function ApproachPage() {
   return (
     <SectionComponent
       id="approach"
-      className="bg-slate-50"
+      className=""
     >
       {/* Header */}
       <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">

@@ -45,7 +45,7 @@ function DailyMotivation() {
     <>
       <section
         id="daily-motivation"
-        className="relative isolate overflow-hidden bg-slate-50 px-3 py-10 sm:px-6 sm:py-16"
+        className="relative isolate overflow-hidden  px-3 py-10 sm:px-6 sm:py-16"
       >
         {/* Decorative amber background glow */}
         <div className="pointer-events-none absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-amber-100/60 blur-3xl" />

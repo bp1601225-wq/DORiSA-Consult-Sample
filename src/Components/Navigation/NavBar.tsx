@@ -1,8 +1,9 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
+
 import Logo from "../../assets/Logo.jpg";
 import { navigationItems } from "./navigationItems";
 
@@ -32,14 +33,14 @@ const Navbar = () => {
 
   useEffect(() => {
     if (location.pathname === "/" && location.hash) {
-      const id = location.hash.replace("#", "");
+      const id = location.hash.slice(1);
 
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
-      }, 100);
+      }, 150);
     }
   }, [location.pathname, location.hash]);
 
@@ -51,22 +52,23 @@ const Navbar = () => {
     };
   }, [menuOpen]);
 
-  const linkClass = (isActive: boolean) =>
-    `relative py-2 text-sm font-medium transition-colors duration-200
+  const linkClass = (active: boolean) =>
+    `relative py-2 text-[13px] font-semibold tracking-wide transition-colors duration-300
     after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full
-    after:origin-left after:transition-transform after:duration-300
+    after:origin-left after:rounded-full after:bg-[#FD7E02]
+    after:transition-transform after:duration-300
     ${
-      isActive
-        ? "text-[#F59E0B] after:scale-x-100 after:bg-[#F59E0B]"
-        : "text-black after:scale-x-0 after:bg-[#F59E0B] hover:text-[#F59E0B] hover:after:scale-x-100"
+      active
+        ? "text-[#1D4ED8] after:scale-x-100"
+        : "text-[#14213D] after:scale-x-0 hover:text-[#1D4ED8] hover:after:scale-x-100"
     }`;
 
-  const mobileLinkClass = (isActive: boolean) =>
-    `w-full border-b border-gray-100 py-3 text-left text-base font-medium
-    transition-colors duration-200 ${
-      isActive
-        ? "border-b-[#F59E0B] text-[#F59E0B]"
-        : "text-black hover:text-[#F59E0B]"
+  const mobileLinkClass = (active: boolean) =>
+    `flex w-full items-center justify-between border-b border-blue-50 py-4 text-left text-sm font-semibold transition-colors
+    ${
+      active
+        ? "text-[#1D4ED8]"
+        : "text-[#14213D] hover:text-[#FD7E02]"
     }`;
 
   return (
@@ -75,36 +77,40 @@ const Navbar = () => {
       className="fixed left-0 top-0 z-50 w-full"
     >
       {/* Top Information Bar */}
-      <div className="bg-gradient-to-r from-[#14213D] via-[#1D4ED8] to-[#172D57] px-4 py-2.5 text-white">
+      <div className="bg-[#14213D] px-4 py-2 text-white sm:px-6">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3">
-          <p className="text-xs font-medium tracking-wide sm:text-sm">
-            Empowering businesses through insight, strategy and sustainable
-            growth.
+          <p className="text-[10px] font-medium tracking-wide text-blue-50 sm:text-xs">
+            Strategic Consulting for Sustainable Growth
           </p>
 
-          <p className="hidden text-xs font-semibold tracking-wide text-blue-100 sm:block">
-            Strategic Consulting for Sustainable Growth
+          <p className="hidden text-[10px] font-semibold tracking-wider text-blue-200 sm:block">
+            INSIGHT. STRATEGY. GROWTH.
           </p>
         </div>
       </div>
 
       {/* Main Navigation */}
-      <nav className="border-b border-gray-100 bg-gray-100/50 px-4 shadow-sm sm:px-6">
-        <div className="mx-auto grid h-[60px] max-w-7xl grid-cols-[1fr_auto_1fr] items-center">
+      <nav className="border-b border-blue-100/70 bg-white/95 px-4 shadow-[0_4px_20px_rgba(20,33,61,0.06)] backdrop-blur-xl sm:px-6">
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between">
+
           {/* Logo */}
-          <Link to="/" className="flex items-center justify-self-start">
+          <Link
+            to="/"
+            onClick={() => setMenuOpen(false)}
+            className="flex shrink-0 items-center"
+          >
             <img
               src={Logo}
               alt="DORiSA Consult"
-              className="h-11 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-7 lg:flex">
+          <div className="hidden items-center gap-6 xl:flex">
             {navigationItems.map((item) => {
               if (item.type === "section") {
-                const isActive =
+                const active =
                   location.pathname === "/" &&
                   location.hash === `#${item.id}`;
 
@@ -112,20 +118,20 @@ const Navbar = () => {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={linkClass(isActive)}
+                    className={linkClass(active)}
                   >
                     {item.label}
                   </button>
                 );
               }
 
-              const isActive = location.pathname === item.path;
+              const active = location.pathname === item.path;
 
               return (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={linkClass(isActive)}
+                  className={linkClass(active)}
                 >
                   {item.label}
                 </Link>
@@ -133,21 +139,27 @@ const Navbar = () => {
             })}
           </div>
 
-   {/* Let's Talk Button */}
-<a
-  href="#contact"
-  className="hidden justify-self-end rounded-md bg-black px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#F59E0B] hover:text-black lg:block"
->
-  Let's Talk
-</a>
+          {/* Let's Talk */}
+          <a
+            href="/#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("contact");
+            }}
+            className="hidden items-center gap-2 rounded-md bg-[#14213D] px-5 py-3 text-xs font-semibold tracking-wide text-white shadow-md shadow-blue-900/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FD7E02] hover:text-white lg:flex"
+          >
+            Let's Talk
+            <ArrowUpRight size={15} />
+          </a>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="col-span-2 justify-self-end text-black transition-colors hover:text-[#F59E0B] lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-[#14213D] transition-all hover:bg-blue-100 hover:text-[#1D4ED8] xl:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
           >
-            {menuOpen ? <X size={25} /> : <Menu size={25} />}
+            {menuOpen ? <X size={23} /> : <Menu size={23} />}
           </button>
         </div>
       </nav>
@@ -156,30 +168,44 @@ const Navbar = () => {
       <AnimatePresence>
         {menuOpen && (
           <>
+            {/* Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
+              animate={{ opacity: 0.45 }}
               exit={{ opacity: 0 }}
               onClick={() => setMenuOpen(false)}
-              className="fixed inset-0 bg-black lg:hidden"
-              style={{ top: "var(--site-navbar-height, 92px)" }}
+              className="fixed inset-0 z-40 bg-[#14213D] xl:hidden"
+              style={{ top: "var(--site-navbar-height, 96px)" }}
             />
 
+            {/* Mobile Drawer */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ duration: 0.25, ease: "easeInOut" }}
-              className="fixed right-0 z-50 w-[85%] max-w-sm overflow-y-auto bg-white p-6 shadow-xl lg:hidden"
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="fixed right-0 z-50 w-[88%] max-w-sm overflow-y-auto rounded-bl-2xl border-l border-blue-100 bg-white p-6 shadow-2xl xl:hidden"
               style={{
-                top: "var(--site-navbar-height, 92px)",
-                height: "calc(100vh - var(--site-navbar-height, 92px))",
+                top: "var(--site-navbar-height, 96px)",
+                height: "calc(100vh - var(--site-navbar-height, 96px))",
               }}
             >
+              {/* Drawer Heading */}
+              <div className="mb-5 border-b border-blue-100 pb-5">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1D4ED8]">
+                  Explore DORiSA
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-gray-500">
+                  Strategic insight and practical solutions for sustainable
+                  business growth.
+                </p>
+              </div>
+
+              {/* Links */}
               <div className="flex flex-col">
                 {navigationItems.map((item) => {
                   if (item.type === "section") {
-                    const isActive =
+                    const active =
                       location.pathname === "/" &&
                       location.hash === `#${item.id}`;
 
@@ -187,35 +213,42 @@ const Navbar = () => {
                       <button
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
-                        className={mobileLinkClass(isActive)}
+                        className={mobileLinkClass(active)}
                       >
                         {item.label}
+                        <ArrowUpRight size={15} />
                       </button>
                     );
                   }
 
-                  const isActive = location.pathname === item.path;
+                  const active = location.pathname === item.path;
 
                   return (
                     <Link
                       key={item.path}
                       to={item.path}
                       onClick={() => setMenuOpen(false)}
-                      className={mobileLinkClass(isActive)}
+                      className={mobileLinkClass(active)}
                     >
                       {item.label}
+                      <ArrowUpRight size={15} />
                     </Link>
                   );
                 })}
-
-                <Link
-                  to="/contact"
-                  onClick={() => setMenuOpen(false)}
-                  className="mt-5 w-fit rounded-md bg-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#F59E0B] hover:text-black"
-                >
-                  Let's Talk
-                </Link>
               </div>
+
+              {/* Contact Button */}
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="mt-8 flex w-full items-center justify-center gap-2 rounded-md bg-[#14213D] px-5 py-4 text-sm font-semibold text-white transition-all hover:bg-[#FD7E02]"
+              >
+                Let's Talk
+                <ArrowUpRight size={17} />
+              </button>
+
+              <p className="mt-8 text-center text-[10px] font-medium tracking-widest text-gray-400">
+                DORiSA CONSULT · SUSTAINABLE GROWTH
+              </p>
             </motion.div>
           </>
         )}

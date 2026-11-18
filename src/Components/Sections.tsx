@@ -35,7 +35,7 @@ function SectionComponent({
       {/* Decorative background */}
       <div className="pointer-events-none absolute -right-32 top-20 h-72 w-72 rounded-full bg-amber-100/40 blur-3xl" />
 
-      <div className="pointer-events-none absolute -left-32 bottom-10 h-72 w-72 rounded-full bg-slate-100/50 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 bottom-10 h-72 w-72 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="relative mx-auto max-w-7xl">
