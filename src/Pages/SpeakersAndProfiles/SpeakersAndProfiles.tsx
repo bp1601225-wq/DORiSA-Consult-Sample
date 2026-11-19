@@ -93,7 +93,7 @@ return (
               <img
                 src={speaker.image}
                 alt={speaker.name}
-                className="w-full h-64 "
+                className="w-full h-100 "
               />
             ) : (
               <div className="w-full h-64 bg-slate-50 flex flex-col items-center justify-center text-slate-400">
@@ -205,13 +205,14 @@ return (
       </div>
 
       <div className="p-6">
-        <div className="w-44 h-44 md:w-52 md:h-52 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center mb-6 overflow-hidden">
+        <div className="w-44  md:w-52 md:h-52 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center mb-6 overflow-hidden">
           {selectedSpeaker.image ? (
             <img
               src={selectedSpeaker.image}
               alt={selectedSpeaker.name}
-              className="w-full h-full object-contain object-center p-1"
+              className="w-full h-full  p-1"
             />
+            
           ) : (
             <span className="text-6xl font-bold text-[#102b50]">
               {selectedSpeaker.name.charAt(0)}
