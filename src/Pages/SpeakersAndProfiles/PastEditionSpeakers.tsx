@@ -1,5 +1,5 @@
 
-function PastSpeakersEdition(editions:any){
+function PastSpeakersEdition(){
 
     return (
    <div>

@@ -184,10 +184,10 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed right-0 z-50 w-[88%] max-w-sm overflow-y-auto rounded-bl-2xl border-l border-blue-100 bg-white p-6 shadow-2xl xl:hidden"
+              className="fixed right-0 z-50 w-[88%] max-w-sm overflow-y-auto overscroll-y-contain rounded-bl-2xl border-l border-blue-100 bg-white p-6 shadow-2xl [touch-action:pan-y] [-webkit-overflow-scrolling:touch] xl:hidden"
               style={{
                 top: "var(--site-navbar-height, 96px)",
-                height: "calc(100vh - var(--site-navbar-height, 96px))",
+                height: "calc(100dvh - var(--site-navbar-height, 96px))",
               }}
             >
               {/* Drawer Heading */}

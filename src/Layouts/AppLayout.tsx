@@ -39,7 +39,7 @@ function AppLayout() {
       {/* Floating Bubbles */}
   
 {/* Visible Floating Bubbles */}
-<div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+{/* <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
   <div className="absolute -left-16 top-32 h-64 w-64 rounded-full bg-blue-200/70" />
 
   <div className="absolute -right-16 top-[25%] h-72 w-72 rounded-full bg-orange-200/60" />
@@ -51,7 +51,7 @@ function AppLayout() {
   <div className="absolute bottom-[25%] -left-10 h-40 w-40 rounded-full bg-orange-200/50" />
 
   <div className="absolute right-[40%] bottom-0 h-32 w-32 rounded-full bg-blue-200/60" />
-</div>
+</div> */}
 
 
       <div className="relative z-10">
