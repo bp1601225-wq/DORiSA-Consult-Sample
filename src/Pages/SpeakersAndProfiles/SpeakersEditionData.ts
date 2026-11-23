@@ -2,6 +2,7 @@ import Doris from "../../assets/4th_Edition/Dr. Doris.jpg"
 import Mercy from "../../assets/4th_Edition/Mercy.jpeg"
 import Enoch from "../../assets/4th_Edition/Dr Enoch.jpg"
 import Beatrice from "../../assets/4th_Edition/Dr. Beatrice.png"
+import AnthonyMorrison from "../../assets/5th_Edition/Anthony.png"
 
 // 5th Edition
 import DrIr from "../../assets/5th_Edition/Dr_ir.png"
@@ -155,12 +156,18 @@ Mercy is passionate about teaching, professional development and sharing practic
 
     ],
   },
+
+
+
+
   {
     title: "5th Edition",
     status: "current" as const,
     theme:
       "Positioning Agribusiness, Retailers and Service Businesses for Sustainable Growth",
     date: "Date to be announced",
+   
+   
     speakers: [
       {
         name: "Ezekiel Amponsah",
@@ -192,6 +199,29 @@ He is passionate about advancing inclusive agribusiness, nurturing entrepreneuri
         image: DrIr,
         cv: "",
       },
+
+
+      {
+  name: "Anthony Selorm Kofituo Morrison",
+  role: "Chief Executive Officer, Chamber of Agribusiness Ghana | Continental Agribusiness Expert",
+  description:
+    "Distinguished agribusiness leader and continental expert with extensive experience in agricultural policy, agribusiness development, private-sector engagement and agricultural transformation across Africa.",
+  qualifications:
+    "Continental Agribusiness Expert Panelist | Former AUDA-NEPAD National Policy Investments Prioritization Expert Panelist",
+  bio: `Anthony Selorm Kofituo Morrison is a distinguished agribusiness leader and the Chief Executive Officer of the Chamber of Agribusiness Ghana. He is actively involved in shaping agricultural policy, strengthening agribusiness ecosystems and advancing skills development and private-sector participation in Ghana's agricultural sector.
+
+He serves as Chair of the Ghana Agriculture Sector Skills Body under the Commission for Technical and Vocational Education and Training (CTVET). He also serves on the advisory boards of the Ministry of Trade, Agribusiness and Industry, the Ministry of Food and Agriculture, Farm Radio International, the Centre for Biotechnology at the University of Ghana, and the West Africa Centre for Crop Improvement at the University of Ghana, Legon.
+
+His other professional engagements include membership of the National Seed Systems Task Team, Agribusiness Technical Working Groups of the Ghana Free Zones Authority, and the Private Sector Development Sector Working Group (PSDSWG) involving the Ministry of Trade, Agribusiness and Industry and the Ministry of Finance.
+
+He is also a former Management Board Member of the School of Agriculture, University of Ghana, and a member of Group 5 of the Post-Malabo Technical Working Group on Halving Poverty and Job Creation, led by AKADEMIYA2063 as part of the African Union's Post-Malabo CAADP agenda.
+
+At the continental level, Anthony Selorm Kofituo Morrison is recognised as an Agribusiness Expert Panelist. He previously served as an expert panelist on National Policy Investments Prioritization for the African Union Development Agency (AUDA-NEPAD), the technical agency responsible for supporting and overseeing CAADP implementation.
+
+Through his leadership, policy engagement and institutional partnerships, he continues to contribute to agricultural transformation, agribusiness development, food systems advancement and sustainable economic growth across Ghana and Africa.`,
+  image: AnthonyMorrison,
+  cv: "",
+},
     ],
   },
 ];

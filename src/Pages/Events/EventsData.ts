@@ -85,48 +85,60 @@ EventsPost() {
 
   location: "Microsoft Teams",
 
-  sources: [
-    {
-      name: "Current Issues Online",
-      link: "https://currentissuesonline.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
-    },
-    {
-      name: "Business & Financial Times",
-      link: "https://thebftonline.com/article/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth",
-    },
-    {
-      name: "Campaigner Online",
-      link: "https://campaigneronline.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
-    },
-    {
-      name: "News Ghana",
-      link: "https://newsghana.com.gh/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
-    },
-    {
-      name: "African Spy",
-      link: "https://africanspy.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
-    },
-    {
-      name: "BestNewsGH",
-      link: "https://bestnewsgh.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
-    },
-    {
-      name: "My Daily News Online",
-      link: "https://mydailynewsonline.com/2026/11/09/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
-    },
-    {
-      name: "Info Ghana News",
-      link: "https://infoghananews.com/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
-    },
-    {
-      name: "AMA Ghana Online",
-      link: "https://amaghanaonline.com/2026/11/09/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth-in-ghana/",
-    },
-    {
-      name: "OPR News",
-      link: "https://opr.news/594b27d2261109en_gh?link=1&client=news",
-    },
-  ],
+sources: [
+  {
+    name: "Current Issues Online",
+    link: "https://currentissuesonline.com/dorisa-consult-forum-equips-ghanaian-businesses-with-funding-strategies/",
+  },
+  {
+    name: "Business & Financial Times",
+    link: "https://thebftonline.com/article/dorisa-consult-to-host-4th-monthly-business-advocacy-forum-on-funding-growth",
+  },
+  {
+    name: "Campaigner Online",
+    link: "https://campaigneronline.com/dorisa-consult-equips-ghanaian-businesses-with-strategies-to-access-funding/",
+  },
+  {
+    name: "News Ghana",
+    link: "https://newsghana.com.gh/dorisa-consult-calls-for-strategic-business-preparation-before-accessing-finance/",
+  },
+  {
+    name: "African Spy",
+    link: "https://africanspy.com/funding-readiness-takes-centre-stage-at-dorisa-consults-4th-business-advocacy-forum/",
+  },
+  {
+    name: "BestNewsGH",
+    link: "https://bestnewsgh.com/accessing-finance-without-proper-preparation-could-hurt-businesses-dorisa-consult/",
+  },
+  {
+    name: "My Daily News Online",
+    link: "https://mydailynewsonline.com/2026/11/23/funding-without-readiness-is-a-liability-dorisa-consult-hosts-4th-edition-of-business-advocacy-forum-on-funding-your-growth/",
+  },
+  {
+    name: "Info Ghana News",
+    link: "https://infoghananews.com/beyond-access-to-capital-dorisa-consult-focuses-on-preparing-businesses-for-growth/",
+  },
+  {
+    name: "AMA Ghana Online",
+    link: "https://amaghanaonline.com/2026/11/23/business-growth-requires-more-than-funding-dorisa-consult-tells-entrepreneurs/",
+  },
+  {
+    name: "GhanaWebbers",
+    link: "https://www.ghanawebbers.com/GhanaHomePage/NewsArchive/Be-Fundable-DORiSA-Consult-Says-Readiness-Not-Just-Money-Unlocks-Growth-2197972",
+  },
+  {
+    name: "Ghana Media",
+    link: "https://ghanamedia.net/be-fundable-dorisa-consult-says-readiness-not-just-money-unlocks-growthbe-fundable-dor/",
+  },
+  {
+    name: "Ghanaian Radar",
+    link: "https://ghanaianradar.com/dorisa-consult-hosts-4th-business-forum-on-how-to-fund-growth/",
+  },
+  {
+    name: "OPR News",
+    link: "https://opr.news/594b27d2261109en_gh?link=1&client=news",
+  },
+],
 },
 
 
